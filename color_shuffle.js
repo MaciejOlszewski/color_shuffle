@@ -1,0 +1,35 @@
+function colorChanger(){
+  var loc = document.getElementById('body');
+  document.onkeydown = findAwesomeColors;
+
+  function findAwesomeColors(e){
+    if(e.keyCode === 32){
+      var values = schuffle();
+      colorRGB(values);
+      colorHEX(values);
+    };
+  };
+
+  function schuffle(){
+    var colors = {
+    first : Math.floor(Math.random()*255),
+    second : Math.floor(Math.random()*255),
+    third : Math.floor(Math.random()*255)
+  };
+    return(colors)
+  }
+
+  function colorRGB(values){
+    var r = values.first.toString();
+    var g = values.second.toString();
+    var b = values.third.toString();
+    loc.style.backgroundColor = ( "rgb(" + r + "," + g + "," + b + ")" );
+    document.getElementById('rgb').innerHTML = ( "(" + r + "," + g + "," + b + ")" );
+  }
+  function colorHEX(values){
+    var hex1 = values.first.toString(16);
+    var hex2 = values.second.toString(16);
+    var hex3 = values.third.toString(16);
+    document.getElementById('hex').innerHTML = ("#" + hex1 + hex2 + hex3);
+  }
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.data {
+  width: 100%;
+  height: 100%;
+}
+.colors {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3em;
+  padding-top: 150px;
+  width: calc(50% - 30px);
+  margin: auto;
+  float: right;
+  line-height: 100%;
+  height: 100%;
+}
+.rgb {
+  padding-left: 30px;
+}
+.hex {
+  padding-right: 30px;
+  text-align: right;
+}
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#hex, #rgb {
+  margin-top: 0px;
+}
