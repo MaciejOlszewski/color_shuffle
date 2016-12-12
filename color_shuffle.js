@@ -1,16 +1,16 @@
-function colorChanger(){
+function colourChanger(){
   var loc = document.getElementById('body');
   document.onkeydown = findAwesomeColors;
 
   function findAwesomeColors(e){
     if(e.keyCode === 32){
-      var values = schuffle();
+      var values = shuffle();
       colorRGB(values);
       colorHEX(values);
     };
   };
 
-  function schuffle(){
+  function shuffle(){
     var colors = {
     first : Math.floor(Math.random()*255),
     second : Math.floor(Math.random()*255),
